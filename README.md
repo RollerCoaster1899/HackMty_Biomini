@@ -1,11 +1,6 @@
 
 ==============================================================================
 AUTOSCREEN - ACCELERATING DRUG DISCOVERY PIPELINE
-An integrated Streamlit-based machine learning platform for bioactivity
-querying, predictive modeling, and molecular optimization through
-automated lead mutation.
-==============================================================================
-OVERVIEW
 ==============================================================================
 AutoScreen implements an end-to-end drug discovery workflow powered by
 Biomini Team. The application streamlines the transition from target
@@ -22,7 +17,7 @@ Lead Optimization: Automated generation of molecular mutants using
 SELFIES to enhance potency beyond the initial screening library.
 Visualization: 3D molecular embedding and GIF generation for structural
 analysis of lead candidates.
-==============================================================================
+
 2. PROJECT STRUCTURE
 AutoScreen/
 |-- app.py [Main Streamlit application]
