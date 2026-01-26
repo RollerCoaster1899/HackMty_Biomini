@@ -18,23 +18,9 @@ Visualization: 3D molecular embedding and GIF generation for structural
 analysis of lead candidates.
 
 2. PROJECT STRUCTURE
-AutoScreen/
-|-- app.py [Main Streamlit application]
-|-- world.csv [Initial screening library]
-|-- biomini_gif.gif [UI Logo]
-|-- WORKFLOW_AUTOSCREEN.jpeg [Methodology diagram]
-|
-|-- best_model.pkl [Saved artifact of the top regressor]
-|-- *.gif [Generated 3D rotating molecule files]
-|
-|-- Data_Outputs/
-| |-- *_S3_bioactivity_data.csv [Raw ChEMBL data]
-| |-- *_S4_bioactivity_data.csv [Cleaned data with descriptors]
-| |-- predictions.csv [Potency results for world.csv]
-| |-- best_mutants_table.csv [Optimized molecular candidates]
-| |-- predicted_molecules.csv [Results from user-uploaded files]
+Everything is in the same file.
 ==============================================================================
-3. KEY FEATURES
+4. KEY FEATURES
 [ Data Processing ]
 ChEMBL Client: Real-time API integration for protein target search.
 Bioactivity Filtering: Automatic extraction of IC50 and unit normalization.
@@ -51,7 +37,7 @@ SELFIES Mutation: Robust molecular string mutation ensuring chemical validity.
 3D Engine: RDKit AllChem embedding with Matplotlib 3D projection.
 GIF Animation: Rotating view generation for structural inspection.
 ==============================================================================
-4. INSTALLATION
+5. INSTALLATION
 Requirements: Python 3.9 - 3.11
 Step 1: Create Environment
 conda create -n autoscreen python=3.10
@@ -62,7 +48,7 @@ pip install numpy matplotlib seaborn joblib selfies pillow scipy
 Step 3: Run Application
 streamlit run app.py
 ==============================================================================
-5. USAGE
+6. USAGE
 Step-by-Step Workflow
 Target Search: Enter a protein name (e.g., "EGFR") to retrieve ChEMBL IDs.
 Training: Select a target. The app will fetch data and train models.
@@ -73,7 +59,7 @@ structures and 3D animations.
 Custom Upload: Use the file uploader at the bottom to predict potencies
 for your own .csv library (requires 'smiles' and 'zinc_id' columns).
 ==============================================================================
-6. CONFIGURATION OPTIONS
+7. CONFIGURATION OPTIONS
 Internal Parameters (Adjustable in app.py):
 ECFP4 nBits: Default set to 2048.
 Mutation Rate: Default set to 3 mutations per SELFIES string.
@@ -81,7 +67,7 @@ Mutant Count: Generates 100 valid mutants per top candidate.
 Test Split: 20% of data held for model validation.
 GIF Frames: 30 frames per rotation for visual clarity.
 ==============================================================================
-7. OUTPUT FILES AND METRICS
+8. OUTPUT FILES AND METRICS
 Performance Metrics
 The app generates a performance table containing:
 MAE (Mean Absolute Error)
@@ -95,7 +81,7 @@ Visual Artifacts
 Rotating GIFs (1.gif, 2.gif, etc.) represent the 3D structures of the
 original lead compound and its optimized mutant counterparts.
 ==============================================================================
-8. TROUBLESHOOTING
+9. TROUBLESHOOTING
 Issue: "Invalid SMILES" warning
 Solution: Ensure the input CSV uses standard canonical SMILES. The pipeline
 will automatically skip molecules that RDKit cannot parse.
