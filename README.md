@@ -1,5 +1,4 @@
 
-==============================================================================
 AUTOSCREEN - ACCELERATING DRUG DISCOVERY PIPELINE
 ==============================================================================
 AutoScreen implements an end-to-end drug discovery workflow powered by
